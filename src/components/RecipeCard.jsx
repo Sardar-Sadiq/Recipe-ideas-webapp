@@ -1,10 +1,20 @@
-import React from 'react'
+// src/components/RecipeCard.jsx
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/Card"
 
-const RecipeCard = () => {
+function RecipeCard({ meal }) {
   return (
-    <div>
-      
-    </div>
+    <Card className="hover:shadow-lg transition">
+      <CardHeader>
+        <CardTitle>{meal.strMeal}</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <img
+          src={meal.strMealThumb}
+          alt={meal.strMeal}
+          className="rounded-lg"
+        />
+      </CardContent>
+    </Card>
   )
 }
 
