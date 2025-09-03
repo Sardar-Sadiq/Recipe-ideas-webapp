@@ -1,5 +1,6 @@
 import { AspectRatio } from "./ui/AspectRatio"
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/Card"
+// In your RecipeCard.jsx file
+import { Card, CardContent } from "@/components/ui/card"
 
 function RecipeCard({ meal, onClick }) {
   return (
