@@ -9,11 +9,14 @@ const sampleImages = [
   "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg",
   "https://www.themealdb.com/images/media/meals/qtuwxu1468233098.jpg",
 ]
-
+function shuffle(array) {
+  return [...array].sort(() => Math.random() - 0.5)
+}
 export default function HomeGrid() {
+  const randomized = shuffle(sampleImages)
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6">
-      {sampleImages.map((img, i) => (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto mt-10">
+      {randomized.map((img, i) => (
         <div
           key={i}
           className={`overflow-hidden rounded-xl shadow-md ${
