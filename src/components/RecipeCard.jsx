@@ -1,9 +1,11 @@
-// src/components/RecipeCard.jsx
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/Card"
 
-function RecipeCard({ meal }) {
+function RecipeCard({ meal, onClick }) {
   return (
-    <Card className="hover:shadow-lg transition">
+    <Card
+      className="hover:shadow-lg transition cursor-pointer"
+      onClick={onClick}
+    >
       <CardHeader>
         <CardTitle>{meal.strMeal}</CardTitle>
       </CardHeader>
@@ -19,3 +21,4 @@ function RecipeCard({ meal }) {
 }
 
 export default RecipeCard
+// src/components/RecipeCard.jsx
