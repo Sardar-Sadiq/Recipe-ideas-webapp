@@ -7,10 +7,10 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 function RecipeDetails({ recipe, onClose }) {
   return (
     <Dialog open={!!recipe} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[400px] lg:max-w-[600px] bg-transparent p-0 border-none shadow-none lg:max-h-[90vh]">
+      <DialogContent className="sm:max-w-[600px] lg:max-w-[600px] bg-transparent p-4 lg:p-8 border-none shadow-none lg:max-h-[90vh]  [&>button]:hidden">
         {/* Card component to hold the content */}
         <Card className="rounded-lg overflow-hidden border-none shadow-2xl">
-          <CardHeader className="flex justify-between items-center sticky top-0 bg-white z-10 p-4">
+          <CardHeader className="flex justify-between items-center sticky top-0 bg-white z-10 py-4 px-6">
             <CardTitle className="text-2xl font-semibold">{recipe.strMeal}</CardTitle>
             <Button variant="outline" onClick={onClose}>
               Close
@@ -20,11 +20,11 @@ function RecipeDetails({ recipe, onClose }) {
             <img
               src={recipe.strMealThumb}
               alt={recipe.strMeal}
-              className="rounded-lg mb-6 w-full object-cover max-h-[50vh] lg:max-h-[200px]"
+              className="rounded-lg mb-6 w-full object-cover max-h-[30vh] lg:max-h-[200px]"
             />
             
             {/* Using ScrollArea for instructions */}
-            <ScrollArea className="h-[500px] pr-4 pb-6">
+            <ScrollArea className="h-[400px] lg:h-[500px] pr-4 pb-6">
               <p className="text-gray-700 mb-2">
                 <span className="font-semibold">Category:</span> {recipe.strCategory}
               </p>
