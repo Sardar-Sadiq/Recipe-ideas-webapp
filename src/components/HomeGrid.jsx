@@ -15,7 +15,7 @@ function shuffle(array) {
 export default function HomeGrid() {
   const randomized = shuffle(sampleImages)
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto mt-10">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl ">
       {randomized.map((img, i) => (
         <div
           key={i}
