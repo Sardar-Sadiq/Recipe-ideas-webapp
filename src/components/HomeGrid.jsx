@@ -1,7 +1,9 @@
-// src/components/HomeHero.jsx
+// src/components/HomeGrid.jsx
+import { useState, useEffect } from "react";
 import { AspectRatio } from "@/components/ui/AspectRatio";
 import "@/font.css";
 import IconCarousel from "./ui/IconCarousel";
+
 const sampleImages = [
   "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
   "https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg",
@@ -15,21 +17,25 @@ function shuffle(array) {
   return [...array].sort(() => Math.random() - 0.5);
 }
 
-export default function HomeHero() {
-  const randomized = shuffle(sampleImages);
+export default function HomeGrid() {
+  const [randomized, setRandomized] = useState([]);
+
+  useEffect(() => {
+    setRandomized(shuffle(sampleImages));
+  }, []);
 
   return (
     <section className="min-h-[80vh] min-w-auto flex flex-col md:flex-row items-center justify-between gap-12 px-6 md:px-16 max-w-8xl mx-auto mt-0">
       {/* Left Section - Intro */}
       <div className="flex-1 text-center md:text-left space-y-8">
-        <h1 className="text-7xl md:text-7xl lg:text-8xl  leading-tight tracking-tight caveat-custom antialiased">
+        <h1 className="text-7xl md:text-7xl lg:text-8xl leading-tight tracking-tight caveat-custom antialiased">
           Welcome to <br />
           <span className="text-shadow-red-400 caveat-custom antialiased">
             Recipidia
           </span>
         </h1>
         <div className="flex flex-col items-start">
-          <p className="text-gray-600 text-lg md:text-xl text-justify max-w-lg poppins-regular ">
+       <p className="text-gray-600 text-lg md:text-xl text-justify max-w-lg poppins-regular ">
             Discover recipes instantly — just enter your ingredients and get
             delicious meal ideas within seconds and share them with friends.
           </p>

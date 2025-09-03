@@ -4,8 +4,9 @@ import { Button } from "./components/ui/button"
 import RecipeCard from "./components/RecipeCard"
 import RecipeDetails from "./components/RecipeDetails"
 import HomeGrid from "./components/HomeGrid"
-import { ChefHat } from 'lucide-react';
-import "@/font.css";
+import { ChefHat } from 'lucide-react'
+import "@/font.css"
+
 function App() {
   const [ingredient, setIngredient] = useState("")
   const [recipes, setRecipes] = useState([])
@@ -13,6 +14,7 @@ function App() {
   const [isSearching, setIsSearching] = useState(false)
   const [hasSearched, setHasSearched] = useState(false)
 
+  // Fetch recipes based on ingredient(s)
   const fetchRecipes = async () => {
     if (!ingredient.trim()) return
 
@@ -35,12 +37,28 @@ function App() {
     }
   }
 
+  // Fetch full recipe details when clicking a card
+  const fetchRecipeDetails = async (idMeal) => {
+    try {
+      const res = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`
+      )
+      const data = await res.json()
+      if (data.meals) {
+        setSelectedRecipe(data.meals[0])
+      }
+    } catch (error) {
+      console.error("Failed to fetch recipe details:", error)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 p-6">
-     <div className="flex items-center gap-2 justify-center mb-6">
-  <h1 className="text-3xl font-bold caveat-custom">Recipedia</h1>
-  <ChefHat />
-</div>
+      {/* Header */}
+      <div className="flex items-center gap-2 justify-center mb-6">
+        <a href="/" className="text-3xl font-bold caveat-custom">Recipedia</a>
+        <ChefHat />
+      </div>
 
       {/* Search Section */}
       <div className="flex gap-2 max-w-md mx-auto mb-8">
@@ -70,7 +88,7 @@ function App() {
                 <RecipeCard
                   key={meal.idMeal}
                   meal={meal}
-                  onClick={() => setSelectedRecipe(meal)}
+                  onClick={() => fetchRecipeDetails(meal.idMeal)}
                 />
               ))}
             </div>
