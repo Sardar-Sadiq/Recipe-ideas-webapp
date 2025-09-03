@@ -4,7 +4,8 @@ import { Button } from "./components/ui/button"
 import RecipeCard from "./components/RecipeCard"
 import RecipeDetails from "./components/RecipeDetails"
 import HomeGrid from "./components/HomeGrid"
-
+import { ChefHat } from 'lucide-react';
+import "@/font.css";
 function App() {
   const [ingredient, setIngredient] = useState("")
   const [recipes, setRecipes] = useState([])
@@ -36,7 +37,10 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
-      <h1 className="text-3xl font-bold text-center mb-6">🍳 Recipe Ideas</h1>
+     <div className="flex items-center gap-2 justify-center mb-6">
+  <h1 className="text-3xl font-bold caveat-custom">Recipedia</h1>
+  <ChefHat />
+</div>
 
       {/* Search Section */}
       <div className="flex gap-2 max-w-md mx-auto mb-8">
