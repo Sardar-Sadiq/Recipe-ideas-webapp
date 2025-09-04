@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Input } from "./components/ui/Input"
-import { Button } from "./components/ui/button"
+import { Button } from "./components/ui/Button"
 import RecipeCard from "./components/RecipeCard"
 import RecipeDetails from "./components/RecipeDetails"
 import HomeGrid from "./components/HomeGrid"
@@ -67,7 +67,7 @@ function App() {
           value={ingredient}
           onChange={(e) => setIngredient(e.target.value)}
         />
-        <Button onClick={fetchRecipes}>Search</Button>
+        <Button className="mt-[2px]" onClick={fetchRecipes}>Search</Button>
       </div>
 
       {/* Home Bento Grid (before search) */}
