@@ -27,7 +27,7 @@ export default function HomeGrid() {
   return (
     <section className="min-h-[80vh] min-w-auto flex flex-col md:flex-row items-center justify-between gap-12 px-6 md:px-16 max-w-8xl mx-auto mt-0">
       {/* Left Section - Intro */}
-      <div className="flex-1 text-center md:text-left space-y-8">
+      <div className="flex-1 text-center justify-center md:text-left space-y-8 md:prder-1 ">
         <h1 className="text-7xl md:text-7xl lg:text-8xl leading-tight tracking-tight caveat-custom antialiased">
           Welcome to <br />
           <span className="text-shadow-red-400 caveat-custom antialiased">
@@ -49,12 +49,12 @@ export default function HomeGrid() {
       </div>
 
       {/* Right Section - Bento Grid */}
-      <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl">
+      <div className="flex-1 grid grid-cols-2 md:grid-cols-4  gap-3 max-w-5xl">
         {randomized.map((img, i) => (
           <div
             key={i}
             className={`overflow-hidden rounded-xl shadow-md ${
-              i % 3 === 0 ? "md:col-span-2 md:row-span-2" : ""
+              i % 3 === 0 ? " md:col-span-2 md:row-span-2" : ""
             }`}
           >
             <AspectRatio ratio={1}>
