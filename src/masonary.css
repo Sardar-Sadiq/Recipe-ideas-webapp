@@ -1,0 +1,4 @@
+.masonry-layout {
+  column-count: 2;
+  column-gap: 1.5rem; /* Matches Tailwind's gap-6 */
+}
