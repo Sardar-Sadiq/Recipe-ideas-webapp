@@ -1,5 +1,5 @@
-import { AspectRatio } from "./ui/AspectRatio"
-import { Card } from "./ui/Card"
+import { AspectRatio } from "./ui/AspectRatio.jsx"
+import { Card } from "./ui/Card.jsx"
 function RecipeCard({ meal, onClick }) {
   return (
     <Card

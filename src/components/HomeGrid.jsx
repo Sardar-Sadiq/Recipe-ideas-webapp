@@ -1,8 +1,8 @@
 // src/components/HomeGrid.jsx
 import { useState, useEffect } from "react";
-import { AspectRatio } from "@/components/ui/AspectRatio";
+import { AspectRatio } from "@/components/ui/AspectRatio.jsx";
 import "@/font.css";
-import IconCarousel from "./ui/IconCarousel";
+import IconCarousel from "./ui/IconCarousel.jsx";
 
 const sampleImages = [
   "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",

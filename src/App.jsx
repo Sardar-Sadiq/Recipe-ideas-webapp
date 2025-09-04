@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Input } from "./components/ui/Input";
-import { Button } from "./components/ui/Button";
-import RecipeCard from "./components/RecipeCard";
-import RecipeDetails from "./components/RecipeDetails";
-import HomeGrid from "./components/HomeGrid";
+import { Input } from "./components/ui/Input.jsx";
+import { Button } from "./components/ui/Button.jsx";
+import RecipeCard from "./components/RecipeCard.jsx";
+import RecipeDetails from "./components/RecipeDetail.jsxs";
+import HomeGrid from "./components/HomeGrid.jsx";
 import { ChefHat } from "lucide-react";
 import "@/font.css";
 

@@ -1,8 +1,8 @@
 import * as React from "react"
-import { Dialog, DialogContent } from "@/components/ui/Dialog"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card"
-import { Button } from "@/components/ui/Button"
-import { ScrollArea } from "@/components/ui/Scroll-area"
+import { Dialog, DialogContent } from "@/components/ui/Dialog.jsx"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card.jsx"
+import { Button } from "@/components/ui/Button.jsx"
+import { ScrollArea } from "@/components/ui/Scroll-area.jsx"
 
 function RecipeDetails({ recipe, onClose }) {
   return (
