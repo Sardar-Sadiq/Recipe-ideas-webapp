@@ -53,7 +53,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
+    <div className="min-h-screen  bg-gray-50 pt-6 px-20 pb-20">
       {/* Header */}
       <div className="flex items-center gap-2 justify-center mb-6">
         <a href="/" className="text-3xl font-bold caveat-custom">Recipedia</a>
@@ -83,9 +83,9 @@ function App() {
           {isSearching ? (
             <div className="text-center text-gray-500">Searching for recipes...</div>
           ) : recipes.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3  lg:px-20 gap-6">
               {recipes.map((meal) => (
-                <RecipeCard
+                <RecipeCard 
                   key={meal.idMeal}
                   meal={meal}
                   onClick={() => fetchRecipeDetails(meal.idMeal)}

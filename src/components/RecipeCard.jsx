@@ -1,10 +1,10 @@
 import { AspectRatio } from "./ui/AspectRatio"
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/Card"
+import { Card } from "./ui/Card"
 function RecipeCard({ meal, onClick }) {
   return (
     <Card
       onClick={onClick}
-      className="relative group cursor-pointer overflow-hidden rounded-xl shadow-md hover:shadow-xl transition"
+      className=" max-w-md flex-wrap cursor-pointer overflow-hidden rounded-xl shadow-md hover:shadow-xl transition"
     >
       <AspectRatio ratio={1}>
         {/* Image */}
