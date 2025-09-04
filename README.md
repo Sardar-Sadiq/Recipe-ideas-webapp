@@ -1,12 +1,28 @@
-# React + Vite
+Recipidia
+Welcome to Recipidia, your personal recipe webpage for instant meal ideas. Find recipes by searching with one or more ingredients from a public API.
+Features
+The app features a responsive hero section with a dynamic image grid, while a clean, Pinterest-style Masonry layout displays your search results. Click any recipe card to view a detailed modal. The UI includes smooth animations and custom fonts for an enhanced user experience.
+Technologies
+This project is built with React, Vite, and Tailwind CSS for a fast and modern development workflow. It uses Shadcn UI for components, Lucide React for icons, and The MealDB API for all recipe data.
+Getting Started
+To get the project running on your local machine, follow these steps.
+Prerequisites
+You will need Node.js and npm installed.
+Installation
+ * Clone the repository:
+   git clone [https://www.your-repo-link.com/recipidia.git](https://www.your-repo-link.com/recipidia.git)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+ * Navigate to the project directory:
+   cd recipidia
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+ * Install the dependencies:
+   npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+ * Run the development server:
+   npm run dev
+
+
+Your application should now be running at http://localhost:5173.
