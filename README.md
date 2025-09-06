@@ -28,7 +28,6 @@ Find recipes by searching with one or more ingredients using data from **TheMeal
 - [Node.js](https://nodejs.org/) (>= 16.x recommended)  
 - npm (comes with Node.js)
 
----
 
 ### 📦 Installation
 
